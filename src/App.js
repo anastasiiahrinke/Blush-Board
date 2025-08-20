@@ -1,24 +1,17 @@
-
+import Header from './components/headerSection/Header';
+import SideBar from './components/sideBar/SideBar';
+import MainSide from './components/mainContent/MainSide';
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Header />
+      <SideBar />
+      <MainSide />
+    </>
   );
 }
 
 export default App;
+

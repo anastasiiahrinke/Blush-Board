@@ -1,0 +1,15 @@
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--salmon-pink);
+    padding: 2.4% 0%;
+    background-image: url('../../assets/img/lace.svg');
+}
+
+.header h1{
+    font-size: 64px;
+    color: var(--pearl);
+    background-color: transparent;
+    padding-top: 15px;
+}

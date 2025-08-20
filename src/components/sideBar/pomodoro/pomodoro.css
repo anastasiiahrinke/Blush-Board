@@ -1,0 +1,60 @@
+/* Pomodoro Timer Styles */
+.pomodoro {
+    border-radius: 15px;
+    padding: 20px;
+    background-color: var(--olive-slate);
+
+}
+
+.pomodoro h3 {
+    color: var(--pearl);
+    margin-bottom: 15px;
+    font-size: 1.1em;
+    background-color: transparent;
+    text-align: center;
+}
+
+.timer-display {
+    font-size: 2.5em;
+    font-weight: bold;
+    color: var(--pearl);
+    margin: 20px 0;
+    background-color: transparent;
+    text-align: center
+}
+
+.timer-buttons {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    background-color: transparent;
+}
+
+.timer-buttons button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.start-btn {
+    background-color: var(--salmon-pink);
+    color: white;
+}
+
+.pause-btn {
+    background-color: var(--salmon-pink);
+    color: white;
+}
+
+.reset-btn {
+    background-color: var(--salmon-pink);
+    color: white;
+}
+
+.timer-buttons button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}

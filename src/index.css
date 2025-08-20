@@ -1,0 +1,23 @@
+:root {
+    --salmon-pink: #B08076;
+    --soft-sandstone: #CBB5A7;
+    --pearl: #E9E3D3;
+    --olive-slate: #697466;
+    --dark-pewter: #373936;
+    --main-font: 'Acherone', normal;;
+}
+
+@font-face {
+    font-family: 'Acherone'; 
+    src: url('./assets/fonts/Acherone.ttf') format('ttf');
+    font-weight: normal;
+    font-style: normal; 
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--main-font);
+    background-color: var(--pearl);
+}
