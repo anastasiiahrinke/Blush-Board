@@ -1,13 +1,13 @@
 import './sidebar.css';
 import Pomodoro from './pomodoro/Pomodoro';
-import Habits from './habits/Habits';
+import ProgressBar from './habits/ProgressBar';
 
-const SideBar = () => {
+const SideBar = ({days, setDays}) => {
     return (
         <>
             <aside className="sidebar"> 
             <Pomodoro />
-            <Habits />
+            <ProgressBar days={days} setDays={setDays} />
             </aside>
         </>
     )

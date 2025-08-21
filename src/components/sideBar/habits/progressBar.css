@@ -1,0 +1,66 @@
+.progress-bar {
+    background-color: var(--olive-slate);
+    border-radius: 15px;
+    padding: 20px;
+    margin: 20px 0;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.day-progress {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.day-progress h3 {
+    margin-bottom: 10px;
+    font-size: 1.1em;
+    font-weight: bold;
+    color: var(--dark-pewter);
+}
+
+/* Контейнер прогресу */
+.progress-container {
+    position: relative;
+    width: 100%;
+}
+
+/* Прогрес-бар */
+.progress-container progress {
+    width: 100%;
+    height: 18px;
+    border-radius: 10px;
+    overflow: hidden;
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+/* Фон прогресбара */
+.progress-container progress::-webkit-progress-bar {
+    background-color: var(--pearl);
+    border-radius: 10px;
+}
+
+/* Заповнена частина */
+.progress-container progress::-webkit-progress-value {
+    background-color: var(--salmon-pink);
+    border-radius: 10px;
+    transition: width 0.4s ease;
+}
+
+/* Firefox */
+.progress-container progress::-moz-progress-bar {
+    background-color: var(--salmon-pink);
+    border-radius: 10px;
+}
+
+/* Відсотки поверх прогресу */
+.progress-label {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 0.85em;
+    font-weight: bold;
+    color: var(--dark-pewter);
+    pointer-events: none; /* щоб текст не заважав клікам */
+}

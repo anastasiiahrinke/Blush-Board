@@ -1,7 +1,7 @@
 .planner {
     margin-left: 20%;
-    margin-top: 80px;
-    padding: 30px 100px;
+    margin-top: 1.5rem;
+    padding: 3rem 6rem;
     
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -36,7 +36,6 @@
     left: 50%;
     transform: translateX(-50%);
     
-    background-color: transparent;
     font-size: 1.2em;
     font-weight: bold;
     color: var(--dark-pewter);
@@ -239,4 +238,58 @@
   text-decoration: line-through;
   color: gray;
 }
+
+.task-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 6px 10px;
+    margin: 6px 0;
+    background-color: var(--soft-sandstone);
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.task-item span {
+    display: flex;
+    gap: 8px;
+    flex: 1;
+    align-items: center;
+    color: var(--dark-pewter);
+    font-size: 0.95em;
+    font-weight: 500;
+}
+
+.completed-task {
+    text-decoration: line-through;
+    color: var(--olive-slate);
+    opacity: 0.7;
+}
+
+.task-item button {
+    margin-left: auto;
+    position: relative;
+    right: 0px;
+    padding: 6px 12px;
+    border: none;
+    border-radius: 6px;
+    font-size: 0.85em;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: var(--salmon-pink);
+    color: var(--pearl);
+    transition: all 0.3s ease;
+}
+
+/* Ефекти при наведенні */
+.task-item button:hover {
+    background-color: var(--dark-pewter);
+    transform: translateY(-2px);
+}
+
+/* Ефект при натисканні */
+.task-item button:active {
+    transform: scale(0.95);
+}
+
 

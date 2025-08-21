@@ -1,10 +1,11 @@
 import Planner from '../mainContent/planner/Planner';
+import './mainSide.css';
 
-const MainSide = () => {
+const MainSide = ({ days, setDays }) => {
     return (
         <div className="main-content">
-            <h1>Home Page</h1>
-            <Planner />
+            <h1>Plan your day!</h1>
+            <Planner days={days} setDays={setDays} />
         </div>
     );
 }
