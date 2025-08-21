@@ -1,9 +1,10 @@
 .sidebar {
     width: 20%;
-    height: calc(100vh - 80px); 
+    /* height: calc(100vh - 70px);  */
     background-color: var(--pearl);
     padding: 20px;
     position: fixed;
+    margin-top: 2rem;
 }
 
 

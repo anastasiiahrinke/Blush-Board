@@ -1,10 +1,38 @@
-:root {
+:root .light-theme {
     --salmon-pink: #B08076;
     --soft-sandstone: #CBB5A7;
     --pearl: #E9E3D3;
     --olive-slate: #697466;
     --dark-pewter: #373936;
-    --main-font: 'Acherone', normal;;
+    --main-font: 'Acherone', normal;
+}
+
+
+.dark-theme {
+  --salmon-pink: #A65C4B;
+  --soft-sandstone: #8C6E5E;
+  --pearl: #D2C6B2;
+  --olive-slate: #4A4036;
+  --dark-pewter: #2B1F18; 
+    --main-font: 'Acherone', normal;
+}
+
+.green-theme {
+    --salmon-pink: #A8C66C;
+    --soft-sandstone: #D9E8A3;
+    --pearl: #F0F6D2;
+    --olive-slate: #85A642;
+    --dark-pewter: #4E6132;
+    --main-font: 'Acherone', normal;    
+}
+
+.blue-theme {
+    --salmon-pink: #221711;   
+    --soft-sandstone: #474b46;  
+    --pearl: #36322c;       
+    --olive-slate: #746e66;  
+    --dark-pewter: #a59e8c;    
+        --main-font: 'Acherone', normal;  
 }
 
 @font-face {

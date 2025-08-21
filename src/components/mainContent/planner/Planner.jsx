@@ -1,6 +1,7 @@
-import card from "../../../assets/img/card.svg";
+// import card from "../../../assets/img/card.svg";
 import "./planner.css";
 import { useState } from "react";
+import { ReactComponent as CardIcon } from "../../../assets/img/card.svg";
 
 const Planner = ({ days, setDays }) => {
   const [activeIndex, setActiveIndex] = useState(null);
@@ -72,7 +73,7 @@ const Planner = ({ days, setDays }) => {
             key={index}
             onClick={() => handleCardClick(index)}
           >
-            <img src={card} alt={`${d.day} card`} />
+            <CardIcon className="card-svg" alt={`${d.day} card`} />
             <span className="day-label">{d.day}</span>
 
             {d.plans.length > 0 && (
@@ -96,7 +97,7 @@ const Planner = ({ days, setDays }) => {
             className="planner-card planner-card--active"
             onClick={(e) => e.stopPropagation()}
           >
-            <img src={card} alt={`${days[activeIndex].day} card`} />
+            <CardIcon className="card-svg" alt={`${days[activeIndex].day} card`} />
 
             {days[activeIndex].plans.length > 0 && (
               <ul className="task-list task-list--in-overlay">

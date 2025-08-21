@@ -5,7 +5,7 @@
     
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 25px 5px;
+    gap: 25px 4px;
     
     box-sizing: border-box;
 }
@@ -22,13 +22,7 @@
     transform: translateY(-20px);
 }
 
-.planner img {
-    width: 100%;
-    height: auto;
-    max-width: 300px;
-    transition: all 0.3s ease;
-    padding: 10px;
-}
+
 
 .day-label {
     position: absolute;
@@ -45,9 +39,7 @@
     pointer-events: none;
 }
 
-.planner img:hover {
-    transform: translateY(-10px);
-}
+
 
 .planner-overlay {
     position: fixed;
@@ -73,10 +65,18 @@
     position: relative;
     transition: all 0.3s ease;
 }
-
+.card-svg {
+  width: 92%;
+  height: 100%;
+  display: block;
+  color: var(--salmon-pink);
+  stroke-width: 1.5px;
+  transition: all 0.3s ease;
+}
 .planner-card--active img {
     max-width: 400px;
     width: 100%;
+
 }
 
 .planner-card--active .day-label {
@@ -89,15 +89,19 @@
     border-radius: 24px;
     margin-top: 25px;
 }
-
+.planner-card--active .card-svg {
+    width: 95%;     
+    max-width: 700px;  
+    height: auto;
+    
+    
+}
 .planner-card--active input {
     position:absolute;
     background-color: var(--olive-slate);
     width: 70%;
     padding: 12px 16px;
-    border: 1px solid var(--light-gray);
     border-radius: 24px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
     font-size: 1em;
     margin-top: 70px;
 }
@@ -186,8 +190,6 @@
     margin-bottom: 10px;
     font-size: 1em;
     width: 100%;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    transition: transform 0.2s ease;
 }
 
 .task-list--in-overlay li:hover {
@@ -245,8 +247,6 @@
     align-items: center;
     padding: 6px 10px;
     margin: 6px 0;
-    background-color: var(--soft-sandstone);
-    border-radius: 8px;
     transition: all 0.3s ease;
 }
 
@@ -281,13 +281,11 @@
     transition: all 0.3s ease;
 }
 
-/* Ефекти при наведенні */
 .task-item button:hover {
     background-color: var(--dark-pewter);
     transform: translateY(-2px);
 }
 
-/* Ефект при натисканні */
 .task-item button:active {
     transform: scale(0.95);
 }
