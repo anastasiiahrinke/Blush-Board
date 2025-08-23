@@ -9,3 +9,8 @@ h1 {
     padding-top: 3rem;
     color: var(--dark-pewter);
 }
+h2 {
+    text-align:center;
+    padding-top: 1rem;
+    color: var(--dark-pewter);
+}

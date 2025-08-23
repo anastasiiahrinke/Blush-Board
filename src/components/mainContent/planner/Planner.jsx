@@ -7,6 +7,9 @@ const Planner = ({ days, setDays }) => {
   const [activeIndex, setActiveIndex] = useState(null);
   const [newTask, setNewTask] = useState("");
 
+  // визначаємо сьогоднішній день англійською (бо в тебе Monday, Tuesday... у масиві)
+  const today = new Date().toLocaleDateString("en-US", { weekday: "long" });
+
   const handleCardClick = (index) => {
     setActiveIndex(index);
     setNewTask("");
@@ -69,7 +72,7 @@ const Planner = ({ days, setDays }) => {
       <div className="planner">
         {days.map((d, index) => (
           <div
-            className="planner-card"
+            className={`planner-card ${d.day === today ? "today-card" : ""}`}
             key={index}
             onClick={() => handleCardClick(index)}
           >
@@ -97,7 +100,10 @@ const Planner = ({ days, setDays }) => {
             className="planner-card planner-card--active"
             onClick={(e) => e.stopPropagation()}
           >
-            <CardIcon className="card-svg" alt={`${days[activeIndex].day} card`} />
+            <CardIcon
+              className="card-svg"
+              alt={`${days[activeIndex].day} card`}
+            />
 
             {days[activeIndex].plans.length > 0 && (
               <ul className="task-list task-list--in-overlay">
@@ -119,9 +125,10 @@ const Planner = ({ days, setDays }) => {
                           fill="currentColor"
                         >
                           <path
-                            d="M9 3v1H4v2h16V4h-5V3h-6zm1 6v9h2V9h-2zm4 
-                                0v9h2V9h-2zM5 7v14c0 1.1.9 2 2 
-                                  2h10c1.1 0 2-.9 2-2V7H5z"
+                            d="M9 3v1H4v2h16V4h-5V3h-6zm1 
+                               6v9h2V9h-2zm4 0v9h2V9h-2zM5 
+                               7v14c0 1.1.9 2 2 2h10c1.1 
+                               0 2-.9 2-2V7H5z"
                           />
                         </svg>
                       </button>
